@@ -27,7 +27,7 @@ class Plant {
      * Called by automata, grows plant by user-set amount, drops seed if able.
      */
     update() {
-        this.growth += this.wrapVal(this.growth + parseInt(document.getElementById("plantgrowamount").value), 100);
+        this.growth = Math.min(parseInt(document.getElementById("plantgrowamount").value) + this.growth, 150);
 
         if (this.growth > 70) {
             this.growth -= 70;

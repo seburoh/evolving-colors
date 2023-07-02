@@ -5,9 +5,9 @@ class Automata {
         //starting values
         this.plants = [];
         this.animats = [];
-        this.height = 100;
-        this.width = 200;
-        this.cellSize = 8;
+        this.height = 40;
+        this.width = 80;
+        this.cellSize = 20;
         this.tickCount = 0;
         this.ticks = 0;
         

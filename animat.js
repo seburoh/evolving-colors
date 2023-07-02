@@ -54,8 +54,20 @@ class Animat {
 
         if (plant && diff < pickiness) {
             this.automata.plants[this.col][this.row] = null;
-            this.health += Math.floor(((90-diff)*(growth/100+1))/10);
+            this.health += this.ingest(diff, growth);
         }
+    }
+
+    /**
+     * Math for how much health an animat gains/loses when eating a plant.
+     * @param {int} diff different in hue from plant between 0 to 180.
+     * @param {int} growth growth rate modifier.
+     * @returns 
+     */
+    ingest(diff, growth) {
+        let growthMod = growth/100+1;
+        diff = Math.floor(diff/10);
+        return (9-diff)*growthMod;
     }
 
     /**
