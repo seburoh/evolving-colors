@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Evolving Colors</title>
+
+    <script type="text/javascript" src="./assetmanager.js"></script>
+    <script type="text/javascript" src="./timer.js"></script>
+    <script type="text/javascript" src="./gameengine.js"></script>
+    <script type="text/javascript" src="./util.js"></script>
+    <script type="text/javascript" src="./main.js"></script>
+    <script type="text/javascript" src="./automata.js"></script>
+    <script type="text/javascript" src="./plant.js"></script>
+    <script type="text/javascript" src="./animat.js"></script>
+</head>
+
+<body>
+    <canvas id="gameWorld" width="1600" height="800" style="background: rgb(42, 42, 42); border: 1px solid black"
+        tabindex="0" autofocus></canvas>
+    <div>
+        <div id="ticks">Ticks: 0</div>
+        <label for="speed">Slow</label>
+        <input type="range" id="speed" min="1" max="120" value="90" step="1">
+        <label for="speed">Fast</label>
+        </br>
+        <label for="cellsize">Smol</label>
+        <input type="range" id="cellsize" min="3" max="50" value="8" step="1">
+        <label for="cellsize">Large</label>
+        </br>
+        <label for="plantgrowamount">Low</label>
+        <input type="range" id="plantgrowamount" min="1" max="100" value="10" step="1">
+        <label for="plantgrowamount">High Plant Growth Rate</label>
+        </br>
+        <label for="animatgrowamount">Low</label>
+        <input type="range" id="animatgrowamount" min="1" max="100" value="10" step="1">
+        <label for="animatgrowamount">High Animat Growth Rate</label>
+        </br>
+        <label for="animatpickiness">More</label>
+        <input type="range" id="animatpickiness" min="1" max="180" value="90" step="1">
+        <label for="animatpickiness">Less Picky Eaters</label>
+        </br>
+        <button id="restartButton" type="button">restart</button>
+        <label for="useImageCheckbox">
+            <input type="checkbox" id="useImageCheckbox">
+            Use Image
+        </label>
+        <label for="wallpaperMode">
+            <input type="checkbox" id="wallpaperMode">
+            Wallpaper Mode
+        </label>
+    </div>
+</body>
+
+</html>
