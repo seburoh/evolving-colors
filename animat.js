@@ -65,7 +65,7 @@ class Animat {
      * @returns 
      */
     ingest(diff, growth) {
-        let growthMod = growth/100+1;
+        let growthMod = growth/100+0.2;
         diff = Math.floor(diff/10);
         return (9-diff)*growthMod;
     }
